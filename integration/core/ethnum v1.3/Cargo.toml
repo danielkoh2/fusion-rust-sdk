@@ -1,0 +1,10 @@
+[package]
+name = "fusionamm-core_integration_ethnum_v1_3"
+edition = "2021"
+
+[lib]
+path = "../../lib.rs"
+
+[dependencies]
+ethnum = { version = "~1.3.2" }
+fusionamm-core = { path = "../../../core" }

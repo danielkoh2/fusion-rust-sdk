@@ -1,0 +1,19 @@
+[package]
+name = "fusionamm-macros"
+version = "1.0.0"
+description = "FusionAMM's rust wasm macros package."
+include = ["src/*"]
+homepage = "https://fusionamm.com"
+license-file = "LICENSE"
+repository = "https://github.com/DefiTuna/fusionamm-sdk"
+keywords = ["solana", "crypto", "defi", "dex", "amm"]
+authors = ["info@fusionamm.com"]
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "^2", features = ["full"] }
+quote = { version = "^1" }
+proc-macro2 = { version = "^1" }

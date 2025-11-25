@@ -1,0 +1,30 @@
+[package]
+name = "fusionamm-core"
+version = "1.0.0"
+description = "FusionAMM core rust package."
+include = ["src/*"]
+homepage = "https://fusionamm.com/"
+license-file = "LICENSE"
+repository = "https://github.com/DefiTuna/fusionamm-sdk"
+keywords = ["solana", "crypto", "defi", "dex", "amm"]
+authors = ["info@fusionamm.com"]
+edition = "2021"
+
+[features]
+default = ["floats"]
+wasm = ["dep:wasm-bindgen", "dep:serde", "dep:serde-big-array", "dep:serde-wasm-bindgen", "dep:js-sys", "dep:tsify"]
+floats = ["dep:libm"]
+
+[dependencies]
+ethnum = { version = "^1.1" }
+libm = { version = ">=0.1, <0.3", optional = true }
+fusionamm-macros = { path = "../macros" }
+wasm-bindgen = { version = "^0.2", optional = true }
+serde = { version = "^1.0", features = ["derive"], optional = true }
+serde-big-array = { version = "^0.5", optional = true }
+serde-wasm-bindgen = { version = "^0.6", optional = true }
+js-sys = { version = "^0.3", optional = true }
+tsify = { version = "^0.4", features = ["js"], optional = true }
+
+[dev-dependencies]
+approx = { version = "^0" }

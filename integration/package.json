@@ -1,0 +1,22 @@
+{
+  "name": "@crypticdot/fusionamm-rust-integration",
+  "version": "1.0.54",
+  "type": "module",
+  "private": true,
+  "files": [],
+  "scripts": {
+    "test": "vitest run index.test.ts --test-timeout 60000 --pool=threads"
+  },
+  "devDependencies": {
+    "@crypticdot/fusionamm-core": "workspace:*",
+    "@crypticdot/fusionamm-rust-sdk": "workspace:*",
+    "@crypticdot/fusionamm-rust-client": "workspace:*",
+    "@crypticdot/fusionamm-rust-core": "workspace:*",
+    "@types/node": "^22.13.14",
+    "@types/semver": "^7.5.8",
+    "semver": "^7.7.1",
+    "smol-toml": "^1.3.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@crypticdot/fusionamm-rust-client",
+  "version": "1.0.66",
+  "type": "module",
+  "private": true,
+  "files": [],
+  "scripts": {
+    "build": "node ./codama.js && cargo build",
+    "test": "cargo test --lib",
+    "deploy": "../../scripts/deploy-cargo",
+    "format": "cargo clippy --fix --allow-dirty --allow-staged && cargo fmt",
+    "lint": "cargo clippy && cargo fmt --check",
+    "clean": "cargo clean"
+  },
+  "devDependencies": {
+    "@codama/nodes-from-anchor": "^1.1.14",
+    "@codama/renderers-rust": "^1.2.2",
+    "@crypticdot/fusionamm-program": "workspace:*",
+    "@crypticdot/fusionamm-rust-core": "workspace:*",
+    "codama": "^1.2.14"
+  }
+}

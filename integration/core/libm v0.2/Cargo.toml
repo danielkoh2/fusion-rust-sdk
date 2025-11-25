@@ -1,0 +1,10 @@
+[package]
+name = "fusionamm-core_integration_libm_v0_2"
+edition = "2021"
+
+[lib]
+path = "../../lib.rs"
+
+[dependencies]
+libm = { version = "~0.2.11" }
+fusionamm-core = { path = "../../../core" }

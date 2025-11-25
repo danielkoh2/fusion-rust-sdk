@@ -1,0 +1,9 @@
+[package]
+name = "fusionamm-client_integration_serde"
+edition = "2021"
+
+[lib]
+path = "../../lib.rs"
+
+[dependencies]
+fusionamm-client = { path = "../../../client", features = ["serde"] }

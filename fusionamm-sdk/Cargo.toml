@@ -1,0 +1,59 @@
+[package]
+name = "fusionamm-sdk"
+version = "1.0.0"
+description = "High-level rust sdk to interact with FusionAMM on-chain program."
+include = ["src/*"]
+homepage = "https://fusionamm.com"
+license-file = "LICENSE"
+repository = "https://github.com/DefiTuna/fusionamm-sdk"
+keywords = ["solana", "crypto", "defi", "dex", "amm"]
+authors = ["info@fusionamm.com"]
+edition = "2021"
+
+[features]
+default = []
+solana-v1 = ["fusionamm-client/solana-v1"]
+
+[dependencies]
+fusionamm-core = { path = "../core", features = ["floats"] }
+fusionamm-client = { path = "../client", features = ["fetch"] }
+
+# Solana
+solana-client = { version = "^2.2" }
+solana-account-decoder = { version = "^2.2" }
+solana-account = { version = "^2.2" }
+solana-program = { version = "^2.2" }
+solana-pubkey = { version = "^2.2" }
+solana-keypair = { version = "^2.2" }
+solana-signer = { version = "^2.2" }
+solana-program-error = { version = "^2.2" }
+solana-instruction = { version = "^2.2" }
+solana-sdk-ids = { version = "^2.2" }
+
+# Spl token
+spl-token = { version = ">=3.0, <9.0", features = ["no-entrypoint"] }
+spl-token-2022 = { version = ">=1.0, <9.0", features = ["no-entrypoint"] }
+spl-memo = { version = ">=3.0, <7.0", features = ["no-entrypoint"] }
+spl-associated-token-account = { version = ">=2.0, <8.0", features = ["no-entrypoint"] }
+
+# Other dependencies
+bincode = { version = "^1.3" }
+serde = { version = "^1.0" }
+serde_json = { version = "^1.0" }
+
+[dev-dependencies]
+serial_test = { version = "^3.1" }
+solana-program-test = { version = "^2.2" }
+solana-version = { version = "^2.2" }
+solana-message = { version = "^2.2" }
+solana-transaction = { version = "^2.2" }
+solana-commitment-config = { version = "^2.2" }
+solana-epoch-info = { version = "^2.2" }
+solana-signature = { version = "^2.2" }
+async-trait = { version = "^0.1" }
+bs58 = { version = "^0.5" }
+base64 = { version = "^0.22" }
+toml = { version = "^0.8" }
+tokio = { version = "^1.0", features = ["sync"] }
+lazy_static = { version = "^1.5" }
+rstest = "0.25"

@@ -1,0 +1,18 @@
+{
+  "name": "@crypticdot/fusionamm-rust-sdk",
+  "version": "1.0.66",
+  "private": true,
+  "files": [],
+  "scripts": {
+    "build": "cargo build",
+    "test": "cargo test --lib",
+    "deploy": "../../scripts/deploy-cargo",
+    "format": "cargo clippy --fix --allow-dirty --allow-staged && cargo fmt",
+    "lint": "cargo clippy && cargo fmt --check",
+    "clean": "cargo clean"
+  },
+  "devDependencies": {
+    "@crypticdot/fusionamm-rust-client": "workspace:*",
+    "@crypticdot/fusionamm-rust-core": "workspace:*"
+  }
+}

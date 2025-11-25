@@ -1,0 +1,14 @@
+{
+  "name": "@crypticdot/fusionamm-rust-macros",
+  "version": "1.0.4",
+  "private": true,
+  "files": [],
+  "scripts": {
+    "build": "cargo build",
+    "test": "cargo test --lib",
+    "deploy": "../../scripts/deploy-cargo",
+    "format": "cargo clippy --fix --allow-dirty --allow-staged && cargo fmt",
+    "lint": "cargo clippy && cargo fmt --check",
+    "clean": "cargo clean"
+  }
+}
